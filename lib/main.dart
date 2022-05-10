@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pedido_seller/helpers/routes.dart';
+import 'helpers/init_bindings.dart' as binding;
 
-import 'pages/home_page.dart';
-
-void main() {
-  runApp(MyApp());
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await binding.initBindings();
+  //await Firebase.initializeApp();
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,7 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: HomePage(),
+      showSemanticsDebugger: false,
+      initialRoute: Routes.initial,
+      getPages: Routes.routes,
     );
   }
 }
