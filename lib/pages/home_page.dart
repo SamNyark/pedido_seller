@@ -61,13 +61,15 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: Dimensions.height10,
           ),
-          ListView.builder(itemBuilder: (context, index) {
-            return Card(
-              child: ListTile(
-
-              ),
-            );
-          })
+          Column(
+            children: [
+              Card(
+                child: ListTile(
+                  
+                ),
+              )
+            ],
+          )
         ],
       ),
     );
