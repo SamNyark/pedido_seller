@@ -4,8 +4,8 @@ import 'package:pedido_seller/helpers/routes.dart';
 import 'helpers/init_bindings.dart' as binding;
 
 void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
   await binding.initBindings();
+  WidgetsFlutterBinding.ensureInitialized();
   //await Firebase.initializeApp();
   runApp(const MyApp());
 }
