@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pedido_seller/helpers/routes.dart';
@@ -6,7 +7,7 @@ import 'helpers/init_bindings.dart' as binding;
 void main() async{
   await binding.initBindings();
   WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
